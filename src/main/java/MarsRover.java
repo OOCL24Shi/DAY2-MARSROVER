@@ -3,6 +3,13 @@ public class MarsRover {
     private int y;
     private Direction direction;
 
+    public static void main(String[] args) {
+        MarsRover rover = new MarsRover(0, 0, Direction.N);
+        String commands = "MMRMBBMLMRRM";
+        rover.executeCommands(commands);
+        System.out.println(rover.showStatus());
+    }
+
     public MarsRover(int x, int y, Direction direction) {
         this.x = x;
         this.y = y;
