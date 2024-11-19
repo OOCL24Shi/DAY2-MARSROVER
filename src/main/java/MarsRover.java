@@ -23,6 +23,9 @@ public class MarsRover {
                 case 'M':
                     moveforward();
                     break;
+                case 'B':
+                    movebackward();
+                    break;
             }
 
         }
@@ -81,6 +84,24 @@ public class MarsRover {
         }
     }
 
+    public void movebackward() {
+
+        switch (direction) {
+            case Direction.N:
+                y--;
+                break;
+            case Direction.S:
+                y++;
+                break;
+            case Direction.W:
+                x++;
+                break;
+            case Direction.E:
+                x--;
+                break;
+
+        }
+    }
     public String showStatus() {
         return x + ":" + y + ":" + direction;
     }
