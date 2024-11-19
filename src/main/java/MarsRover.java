@@ -22,6 +22,25 @@ public class MarsRover {
         }
     }
 
+    private void turnLeft() {
+        switch (direction) {
+            case Direction.N:
+                direction = Direction.W;
+                break;
+            case Direction.S:
+                direction = Direction.E;
+                break;
+            case Direction.W:
+                direction = Direction.S;
+                break;
+            case Direction.E:
+                direction = Direction.N;
+
+        }
+
+    }
+
+
     public String showStatus() {
         return x + ":" + y + ":" + direction;
     }
