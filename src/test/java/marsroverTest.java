@@ -96,4 +96,34 @@ public class marsroverTest {
         rover.executeCommands("M");
         assertEquals("-1:0:W", rover.showStatus());
     }
+
+    //move backward
+
+    @Test
+    public void should_decrease_y_by_1_when_orient_north() {
+        MarsRover rover = new MarsRover(0, 0, Direction.N);
+        rover.executeCommands("B");
+        assertEquals("0:-1:N", rover.showStatus());
+    }
+
+    @Test
+    public void should_increase_y_by_1_when_orient_south() {
+        MarsRover rover = new MarsRover(0, 0, Direction.S);
+        rover.executeCommands("B");
+        assertEquals("0:1:S", rover.showStatus());
+    }
+
+    @Test
+    public void should_decrease_x_by_1_when_orient_east() {
+        MarsRover rover = new MarsRover(0, 0, Direction.E);
+        rover.executeCommands("B");
+        assertEquals("-1:0:E", rover.showStatus());
+    }
+
+    @Test
+    public void should_increase_x_by_1_when_orient_west() {
+        MarsRover rover = new MarsRover(0, 0, Direction.W);
+        rover.executeCommands("B");
+        assertEquals("1:0:W", rover.showStatus());
+    }
 }
