@@ -20,6 +20,9 @@ public class MarsRover {
                 case 'R':
                     turnRight();
                     break;
+                case 'M':
+                    moveforward();
+                    break;
             }
 
         }
@@ -56,6 +59,24 @@ public class MarsRover {
                 break;
             case Direction.E:
                 direction = Direction.S;
+                break;
+        }
+    }
+
+    public void moveforward() {
+
+        switch (direction) {
+            case Direction.N:
+                y++;
+                break;
+            case Direction.S:
+                y--;
+                break;
+            case Direction.W:
+                x--;
+                break;
+            case Direction.E:
+                x++;
                 break;
         }
     }
