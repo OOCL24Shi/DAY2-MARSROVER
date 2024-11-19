@@ -10,6 +10,18 @@ public class MarsRover {
 
     }
 
+    public void executeCommands(String commands) {
+        for (char command : commands.toCharArray()) {
+
+            switch(command) {
+                case 'L':
+                    turnLeft();
+                    break;
+            }
+
+        }
+    }
+
     public String showStatus() {
         return x + ":" + y + ":" + direction;
     }
