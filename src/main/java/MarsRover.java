@@ -17,6 +17,9 @@ public class MarsRover {
                 case 'L':
                     turnLeft();
                     break;
+                case 'R':
+                    turnRight();
+                    break;
             }
 
         }
@@ -40,6 +43,22 @@ public class MarsRover {
 
     }
 
+    private void turnRight() {
+        switch (direction) {
+            case Direction.N:
+                direction = Direction.E;
+                break;
+            case Direction.W:
+                direction = Direction.N;
+                break;
+            case Direction.S:
+                direction = Direction.W;
+                break;
+            case Direction.E:
+                direction = Direction.S;
+                break;
+        }
+    }
 
     public String showStatus() {
         return x + ":" + y + ":" + direction;
