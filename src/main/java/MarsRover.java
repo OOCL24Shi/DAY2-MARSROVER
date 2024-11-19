@@ -1,9 +1,9 @@
 public class MarsRover {
     private int x;
     private int y;
-    private char direction;
+    private Direction direction;
 
-    public MarsRover(int x, int y, char direction) {
+    public MarsRover(int x, int y, Direction direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;

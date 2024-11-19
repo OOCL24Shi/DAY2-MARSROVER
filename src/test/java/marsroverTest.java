@@ -5,7 +5,7 @@ public class marsroverTest {
 
     @Test
     public void should_initialize_mars_rover() {
-        MarsRover rover = new MarsRover(0, 0, 'N');
+        MarsRover rover = new MarsRover(0, 0, Direction.N);
         String report = rover.showStatus();
         assertEquals("0:0:N", report);
     }
